@@ -4,6 +4,6 @@ export {
   WalkerFactory,
   JSON,
   type Walker,
-} from './walker'
+} from './walker.js'
 
-export { JSONPathWalker } from './json'
+export { JSONPathWalker } from './json.js'

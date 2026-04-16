@@ -40,8 +40,8 @@
   "author": "Andrew Chalmers",
   "license": "MIT",
   "dependencies": {
-    "@console-one/multimap": "file:../multimap",
-    "@console-one/subscription": "file:../subscription"
+    "@console-one/multimap": "^0.1.0",
+    "@console-one/subscription": "^0.1.0"
   },
   "devDependencies": {
     "typescript": "^5.4.0",

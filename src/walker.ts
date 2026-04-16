@@ -1,5 +1,5 @@
 
-import { JSONPathWalker as JSON } from './json'
+import { JSONPathWalker as JSON } from './json.js'
 import { Subscription } from '@console-one/subscription'
 
 export class Handler {
@@ -47,4 +47,4 @@ export const WalkerFactory =  {
 }
 
 
-export { JSONPathWalker as JSON } from './json';
+export { JSONPathWalker as JSON } from './json.js';

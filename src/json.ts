@@ -3,7 +3,7 @@
 import { ListMultimap } from '@console-one/multimap';
 
 import { Subscription } from '@console-one/subscription'
-import { Handler, Walker } from './walker'
+import { Handler, Walker } from './walker.js'
 
 
 
