@@ -2,6 +2,14 @@
   "name": "@console-one/walker",
   "version": "0.1.0",
   "description": "Path-based tree walker framework with a JSONPath walker implementation. Register handlers against dotted paths, walk a value, and receive per-path callbacks.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/console-one/walker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/console-one/walker/issues"
+  },
+  "homepage": "https://github.com/console-one/walker#readme",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,8 +21,8 @@
   },
   "files": [
     "dist",
-    "src",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
@@ -23,9 +31,14 @@
     "test:watch": "vitest",
     "prepublishOnly": "npm run clean && npm run build && npm test"
   },
-  "keywords": ["jsonpath", "walker", "tree", "visitor"],
-  "license": "UNLICENSED",
-  "private": true,
+  "keywords": [
+    "jsonpath",
+    "walker",
+    "tree",
+    "visitor"
+  ],
+  "author": "Andrew Chalmers",
+  "license": "MIT",
   "dependencies": {
     "@console-one/multimap": "file:../multimap",
     "@console-one/subscription": "file:../subscription"
