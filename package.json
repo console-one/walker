@@ -1,0 +1,38 @@
+{
+  "name": "@console-one/walker",
+  "version": "0.1.0",
+  "description": "Path-based tree walker framework with a JSONPath walker implementation. Register handlers against dotted paths, walk a value, and receive per-path callbacks.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
+  },
+  "keywords": ["jsonpath", "walker", "tree", "visitor"],
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@console-one/multimap": "file:../multimap",
+    "@console-one/subscription": "file:../subscription"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "@types/node": "^20.0.0"
+  }
+}
