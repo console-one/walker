@@ -144,13 +144,9 @@ WalkerFactory.create(type: 'json'): Walker
 - [`@console-one/multimap`](../multimap) — `ListMultimap` is used to hold multiple handlers per path.
 - [`@console-one/subscription`](../subscription) — supported as a first-class handler shape; optional at the call site.
 
-## Fixed during extraction
+## Notes on behavior
 
-The source had one latent bug surfaced by tests:
-
-- **`handler.hasOwnProperty('complete')` incorrectly triggered for handlers constructed without a `complete` callback.** Because `Handler`'s `public complete?: () => void` constructor parameter assigns to the instance even when the caller passes nothing, `hasOwnProperty('complete')` returned `true` even when `complete` was `undefined`. The walker then called `handler.complete()` and crashed. Fixed: the check is now `typeof (handler as Handler).complete === 'function'`, which matches the actual contract.
-
-If you were relying on the broken behavior, you can't have been — the old code crashed.
+- **`complete` callbacks are dispatched via `typeof === 'function'`, not `hasOwnProperty('complete')`.** `Handler`'s constructor assigns the property even when no callback is passed (it's just `undefined`), so a `hasOwnProperty` check would fire for every handler and crash on invocation.
 
 ## Tests
 
