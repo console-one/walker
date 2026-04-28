@@ -1,6 +1,6 @@
 {
   "name": "@console-one/walker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Path-based tree walker framework with a JSONPath walker implementation. Register handlers against dotted paths, walk a value, and receive per-path callbacks.",
   "repository": {
     "type": "git",
